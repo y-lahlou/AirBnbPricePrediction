@@ -1,3 +1,7 @@
+IEOR4579 Final Project
+Forked from Pouya Rezazadeh' repository (see below)
+Ziad El Assal, Youssef Lahlou, Lorenzo Rega
+
 ###########################################
 CS229 Final Project
 Authors:
