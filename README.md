@@ -1,3 +1,18 @@
+# IEOR 4579 Machine Learning in Practice – Final Project
+## Airbnb Price Prediction Using MachineLearning and Sentiment Analysis
+
+Authors: Ziad El Assal, Youssef Lahlou, Lorenzo Rega
+
+Forked from Pouya Rezazadeh Kalehbasti's repository
+
+We reproduce the results of Kalehbast et al., extend using demographic and socio-economic features and conduct a robustness analysis on the models used. 
+Although we slightly modified `data_cleanup.py and `data_preprocessing.py`, most of our code is in the following notebooks:
+- `data_cleanup.ipynb` joins the new dataset to the original one,
+- `run_models.ipynb` runs the models using the enhanced dataset and statistical significance of the metrics, 
+- `robustness.ipynb` contains the robustness analysis.
+
+The new dataset can be found at http://faculty.baruch.cuny.edu/geoportal/resources/nyc_geog/nyc_zcta_census_data.xlsx
+
 ###########################################
 
 Airbnb Price Prediction Using MachineLearning and Sentiment Analysis
