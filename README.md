@@ -1,5 +1,5 @@
 # IEOR 4579 Machine Learning in Practice – Final Project
-## Airbnb Price Prediction Using MachineLearning and Sentiment Analysis
+## Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
 
 Authors: Ziad El Assal, Youssef Lahlou, Lorenzo Rega
 
