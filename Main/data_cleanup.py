@@ -10,19 +10,20 @@ import pandas as pd
 import math
 import datetime as dt
 # Importing the dataset
-filename = '../Data/listings.csv'
-reviews_filename = '../Data/reviews_cleaned.csv'
-data = pd.read_csv(filename)
+filename = '/Users/macbookpro/AirBnbPricePrediction/Data/listings.csv'
+reviews_filename = '/Users/macbookpro/AirBnbPricePrediction/Data/reviews_cleaned.csv'
+data = pd.read_csv(filename, dtype={'host_verifications': 'string'})
 reviews = pd.read_csv(reviews_filename, names = ['listing_id', 'comments'])
-# print(data.info)
-# print(list(data))
-# print(list(data)[43])
-# print(list(data)[87])
-# print(list(data)[88])
+#print(data.info)
+#print(list(data))
+#print(list(data)[43])
+#print(list(data)[87])
+#print(list(data)[88])
+#print(list(data['host_verifications']))
 
 # Taking out the unwanted columns
-print(len(data.columns))
-exit()
+#print(len(data.columns))
+#exit()
 data = pd.DataFrame.drop(data, columns=[
     'host_name',
     'notes', # Added PRK
@@ -61,7 +62,7 @@ data = pd.DataFrame.drop(data, columns=[
     'host_neighbourhood',
     'market',
     'is_location_exact',
-    'square_feet',
+    #'square_feet',
     'weekly_price',
     'monthly_price',
     'availability_30',
@@ -91,7 +92,7 @@ def collect_host_verifications(entry):
         if (verification != "" and verification != 'None'):
             host_verification_set.add(verification +"_verification")
 
-data['host_verifications'].apply(collect_host_verifications)
+#data['host_verifications'].apply(collect_host_verifications)
 
 def generic_verification(entry, v):
     entry_list = str(entry).replace("[", "").replace("]", "").replace("'", "").replace('"', "").replace(" ", "").split(',')
@@ -268,4 +269,4 @@ def clean_comments(entry):
         return 0
     return entry
 data['comments'] = data['comments'].apply(clean_comments)
-data.to_csv('../Data/data_cleaned.csv')
+data.to_csv('/Users/macbookpro/AirBnbPricePrediction/Data/data_cleaned.csv')
